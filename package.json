@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "update": "node scripts/update_stats.js"
+    "update": "node scripts/update_stats.cjs"
   }
 }
 
