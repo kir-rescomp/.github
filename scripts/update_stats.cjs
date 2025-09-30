@@ -120,44 +120,80 @@ function formatNumber(n) {
   return new Intl.NumberFormat("en-GB").format(n);
 }
 
+function renderBadge(label, value, color = "blue", logo = "", link = "") {
+  const badge = `![${label} - ${value}](https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(String(value))}-${color}?style=for-the-badge${logo ? `&logo=${encodeURIComponent(logo)}` : ""})`;
+  return link ? `[${badge}](${link})` : badge;
+}
+
 function renderMarkdown(stats, topRepos) {
   const {
-    repoCount, totalCommits, openIssues, closedIssues,
-    openPRs, closedPRs, mergedPRs, stars, forks,
+    repoCount,
+    totalCommits,
+    openIssues,
+    closedIssues,
+    openPRs,
+    closedPRs,
+    mergedPRs,
+    stars,
+    forks,
   } = stats;
+
+  const fmt = (n) => new Intl.NumberFormat("en-GB").format(n);
+
+  const badges = [
+    renderBadge("Repos", fmt(repoCount), "0a84ff", "github", `https://github.com/${ORG}?tab=repositories`),
+    renderBadge("Commits", fmt(totalCommits), "10b981"),
+    renderBadge("Issues (open)", fmt(openIssues), "f59e0b"),
+    renderBadge("PRs (open)", fmt(openPRs), "8b5cf6"),
+    renderBadge("Stars", fmt(stars), "14b8a6", "github"),
+    renderBadge("Forks", fmt(forks), "06b6d4", "github"),
+  ].join(" ");
 
   const lines = [];
   lines.push(`### 📊 Organisation Stats for **${ORG}**`);
   lines.push("");
-  lines.push("| Metric | Count |");
-  lines.push("|---|---:|");
-  lines.push(`| Repositories | ${formatNumber(repoCount)} |`);
-  lines.push(`| Commits (default branches) | ${formatNumber(totalCommits)} |`);
-  lines.push(`| Issues — Open | ${formatNumber(openIssues)} |`);
-  lines.push(`| Issues — Closed | ${formatNumber(closedIssues)} |`);
-  lines.push(`| PRs — Open | ${formatNumber(openPRs)} |`);
-  lines.push(`| PRs — Closed | ${formatNumber(closedPRs)} |`);
-  lines.push(`| PRs — Merged | ${formatNumber(mergedPRs)} |`);
-  lines.push(`| Stars | ${formatNumber(stars)} |`);
-  lines.push(`| Forks | ${formatNumber(forks)} |`);
+  lines.push(`<div align="center">${badges}</div>`);
   lines.push("");
-  lines.push(`<sub>Updated: ${new Date().toISOString().replace("T"," ").replace("Z"," UTC")}</sub>`);
+  lines.push(`<table>`);
+  lines.push(`<thead>`);
+  lines.push(`<tr>`);
+  lines.push(`<th align="left">Metric</th><th align="right">Count</th>`);
+  lines.push(`</tr>`);
+  lines.push(`</thead>`);
+  lines.push(`<tbody>`);
+  lines.push(`<tr><td>📦 Repositories</td><td align="right"><code>${fmt(repoCount)}</code></td></tr>`);
+  lines.push(`<tr><td>🧭 Commits (default branches)</td><td align="right"><code>${fmt(totalCommits)}</code></td></tr>`);
+  lines.push(`<tr><td>🐞 Issues — Open</td><td align="right"><code>${fmt(openIssues)}</code></td></tr>`);
+  lines.push(`<tr><td>✅ Issues — Closed</td><td align="right"><code>${fmt(closedIssues)}</code></td></tr>`);
+  lines.push(`<tr><td>🔁 PRs — Open</td><td align="right"><code>${fmt(openPRs)}</code></td></tr>`);
+  lines.push(`<tr><td>🧹 PRs — Closed</td><td align="right"><code>${fmt(closedPRs)}</code></td></tr>`);
+  lines.push(`<tr><td>🎉 PRs — Merged</td><td align="right"><code>${fmt(mergedPRs)}</code></td></tr>`);
+  lines.push(`<tr><td>⭐ Stars</td><td align="right"><code>${fmt(stars)}</code></td></tr>`);
+  lines.push(`<tr><td>🍴 Forks</td><td align="right"><code>${fmt(forks)}</code></td></tr>`);
+  lines.push(`</tbody>`);
+  lines.push(`</table>`);
+  lines.push("");
+  lines.push(`<sub>Updated: ${new Date().toISOString().replace("T", " ").replace("Z", " UTC")}</sub>`);
   lines.push("");
 
   if (topRepos.length) {
-    lines.push("#### ⭐ Top repositories by commits (default branch)");
+    lines.push(`<details>`);
+    lines.push(`<summary><b>⭐ Top repositories by commits</b></summary>`);
     lines.push("");
-    lines.push("| Repository | Commits | Open Issues | Open PRs | Stars | Forks |");
-    lines.push("|---|---:|---:|---:|---:|---:|");
+    lines.push(`| Repository | Commits | Open Issues | Open PRs | Stars | Forks |`);
+    lines.push(`|---|---:|---:|---:|---:|---:|`);
     for (const r of topRepos) {
       lines.push(
-        `| [${r.name}](https://github.com/${ORG}/${r.name}) | ${formatNumber(r.commits)} | ${formatNumber(r.issuesOpen)} | ${formatNumber(r.prsOpen)} | ${formatNumber(r.stars)} | ${formatNumber(r.forks)} |`
+        `| [${r.name}](https://github.com/${ORG}/${r.name}) | ${fmt(r.commits)} | ${fmt(r.issuesOpen)} | ${fmt(r.prsOpen)} | ${fmt(r.stars)} | ${fmt(r.forks)} |`
       );
     }
+    lines.push(`</details>`);
     lines.push("");
   }
+
   return lines.join("\n");
 }
+
 
 function replaceStatsSection(readme, newBlock) {
   const start = "<!-- ORG-STATS:START -->";
