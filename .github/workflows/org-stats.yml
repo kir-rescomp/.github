@@ -1,0 +1,51 @@
+name: Update Org Profile Stats
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "17 3 * * *"   # once daily at 03:17 UTC — change as you like
+  push:
+    paths:
+      - "scripts/**"
+      - "package.json"
+      - "profile/README.md"
+      - ".github/workflows/org-stats.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # to push README changes
+      # id-token: write     # not needed here
+      # issues: read        # not needed here
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install (no deps, but keep step for future)
+        run: npm ci --ignore-scripts --prefer-offline || true
+
+      - name: Update stats in README
+        env:
+          ORG: your-org-login   # <-- set your org login here
+          # Use GH_TOKEN for private repos; store as an Actions Secret (Settings > Secrets and variables > Actions)
+          GH_TOKEN: ${{ secrets.ORG_TOKEN || secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run update
+
+      - name: Commit & push if changed
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add profile/README.md
+            git commit -m "chore: update org stats [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
