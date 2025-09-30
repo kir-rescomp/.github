@@ -120,9 +120,23 @@ function formatNumber(n) {
   return new Intl.NumberFormat("en-GB").format(n);
 }
 
-function renderBadge(label, value, color = "blue", logo = "", link = "") {
-  const badge = `![${label} - ${value}](https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(String(value))}-${color}?style=for-the-badge${logo ? `&logo=${encodeURIComponent(logo)}` : ""})`;
-  return link ? `[${badge}](${link})` : badge;
+function shields(label, value, color, opts = {}) {
+  const { logo, link } = opts;
+  const src = `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(String(value))}-${color}?style=for-the-badge${logo ? `&logo=${encodeURIComponent(logo)}` : ""}`;
+  const img = `<img alt="${label} - ${value}" src="${src}" />`;
+  return link ? `<a href="${link}">${img}</a>` : img;
+}
+
+function renderBadgesHTML(stats) {
+  const fmt = (n) => new Intl.NumberFormat("en-GB").format(n);
+  return [
+    shields("Repos", fmt(stats.repoCount), "0a84ff", { logo: "github", link: `https://github.com/${ORG}?tab=repositories` }),
+    shields("Commits", fmt(stats.totalCommits), "10b981"),
+    shields("Issues (open)", fmt(stats.openIssues), "f59e0b"),
+    shields("PRs (open)", fmt(stats.openPRs), "8b5cf6"),
+    shields("Stars", fmt(stats.stars), "14b8a6", { logo: "github" }),
+    shields("Forks", fmt(stats.forks), "06b6d4", { logo: "github" }),
+  ].join(" ");
 }
 
 function renderMarkdown(stats, topRepos) {
@@ -152,7 +166,7 @@ function renderMarkdown(stats, topRepos) {
   const lines = [];
   lines.push(`### 📊 Organisation Stats for **${ORG}**`);
   lines.push("");
-  lines.push(`<div align="center">${badges}</div>`);
+  lines.push(`<p align="center">${renderBadgesHTML(stats)}</p>`);
   lines.push("");
   lines.push(`<table>`);
   lines.push(`<thead>`);
