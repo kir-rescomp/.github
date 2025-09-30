@@ -3,9 +3,9 @@
  * Update the org profile README stats block using GitHub GraphQL.
  *
  * Env:
- *   ORG        - required, your org login ("kir-rescomp")
- *   GH_TOKEN   - a token; PAT with read:org + repo if you want private repos included,
- *                otherwise the default GITHUB_TOKEN works for public.
+ *   ORG        - org login (default: "kir-rescomp")
+ *   GH_TOKEN   - PAT (read:org + repo) to include private repos,
+ *                else falls back to GITHUB_TOKEN (public only)
  */
 const fs = require("fs");
 const path = require("path");
@@ -18,14 +18,15 @@ if (!GH_TOKEN) {
   process.exit(1);
 }
 
-// Tweak filters:
+// Filters (tweak as you like)
 const INCLUDE_FORKS = false;
 const INCLUDE_ARCHIVED = false;
-// null => both public & private; or "PUBLIC" / "PRIVATE"
+// null => both; "PUBLIC" or "PRIVATE" to restrict
 const PRIVACY = null;
 
 const README_PATH = path.join(process.cwd(), "profile", "README.md");
 
+// --- GraphQL helper ---------------------------------------------------------
 const gql = (query, variables) =>
   new Promise((resolve, reject) => {
     const data = JSON.stringify({ query, variables });
@@ -47,7 +48,14 @@ const gql = (query, variables) =>
         res.on("end", () => {
           try {
             const json = JSON.parse(body);
-            if (json.errors) return reject(json.errors);
+            if (!String(res.statusCode).startsWith("2")) {
+              return reject(
+                new Error(
+                  `HTTP ${res.statusCode}: ${JSON.stringify(json.errors || json)}`
+                )
+              );
+            }
+            if (json.errors) return reject(new Error(JSON.stringify(json.errors)));
             resolve(json.data);
           } catch (e) {
             reject(e);
@@ -60,12 +68,20 @@ const gql = (query, variables) =>
     req.end();
   });
 
+// --- Query + pagination ------------------------------------------------------
 const REPO_PAGE_SIZE = 50;
 
 const REPOS_QUERY = `
 query($org:String!, $after:String, $isFork:Boolean, $privacy:RepositoryPrivacy, $pageSize:Int!) {
   organization(login: $org) {
-    repositories(first: $pageSize, after: $after, isFork: $isFork, privacy: $privacy, ownerAffiliations: OWNER, orderBy:{field:NAME, direction:ASC}) {
+    repositories(
+      first: $pageSize,
+      after: $after,
+      isFork: $isFork,
+      privacy: $privacy,
+      ownerAffiliations: OWNER,
+      orderBy:{field:NAME, direction:ASC}
+    ) {
       pageInfo { hasNextPage endCursor }
       nodes {
         name
@@ -97,6 +113,7 @@ query($org:String!, $after:String, $isFork:Boolean, $privacy:RepositoryPrivacy, 
 async function fetchAllRepos() {
   let after = null;
   const all = [];
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     const data = await gql(REPOS_QUERY, {
       org: ORG,
@@ -116,21 +133,24 @@ async function fetchAllRepos() {
   return all;
 }
 
-function formatNumber(n) {
-  return new Intl.NumberFormat("en-GB").format(n);
-}
+// --- Rendering helpers -------------------------------------------------------
+const fmt = (n) => new Intl.NumberFormat("en-GB").format(n);
 
 function shields(label, value, color, opts = {}) {
   const { logo, link } = opts;
-  const src = `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(String(value))}-${color}?style=for-the-badge${logo ? `&logo=${encodeURIComponent(logo)}` : ""}`;
+  const src = `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(
+    String(value)
+  )}-${color}?style=for-the-badge${logo ? `&logo=${encodeURIComponent(logo)}` : ""}`;
   const img = `<img alt="${label} - ${value}" src="${src}" />`;
   return link ? `<a href="${link}">${img}</a>` : img;
 }
 
 function renderBadgesHTML(stats) {
-  const fmt = (n) => new Intl.NumberFormat("en-GB").format(n);
   return [
-    shields("Repos", fmt(stats.repoCount), "0a84ff", { logo: "github", link: `https://github.com/${ORG}?tab=repositories` }),
+    shields("Repos", fmt(stats.repoCount), "0a84ff", {
+      logo: "github",
+      link: `https://github.com/${ORG}?tab=repositories`,
+    }),
     shields("Commits", fmt(stats.totalCommits), "10b981"),
     shields("Issues (open)", fmt(stats.openIssues), "f59e0b"),
     shields("PRs (open)", fmt(stats.openPRs), "8b5cf6"),
@@ -152,20 +172,10 @@ function renderMarkdown(stats, topRepos) {
     forks,
   } = stats;
 
-  const fmt = (n) => new Intl.NumberFormat("en-GB").format(n);
-
-  const badges = [
-    renderBadge("Repos", fmt(repoCount), "0a84ff", "github", `https://github.com/${ORG}?tab=repositories`),
-    renderBadge("Commits", fmt(totalCommits), "10b981"),
-    renderBadge("Issues (open)", fmt(openIssues), "f59e0b"),
-    renderBadge("PRs (open)", fmt(openPRs), "8b5cf6"),
-    renderBadge("Stars", fmt(stars), "14b8a6", "github"),
-    renderBadge("Forks", fmt(forks), "06b6d4", "github"),
-  ].join(" ");
-
   const lines = [];
   lines.push(`### 📊 Organisation Stats for **${ORG}**`);
   lines.push("");
+  // HTML badges (centered). Markdown isn’t parsed inside HTML, so we use <img>.
   lines.push(`<p align="center">${renderBadgesHTML(stats)}</p>`);
   lines.push("");
   lines.push(`<table>`);
@@ -176,9 +186,15 @@ function renderMarkdown(stats, topRepos) {
   lines.push(`</thead>`);
   lines.push(`<tbody>`);
   lines.push(`<tr><td>📦 Repositories</td><td align="right"><code>${fmt(repoCount)}</code></td></tr>`);
-  lines.push(`<tr><td>🧭 Commits (default branches)</td><td align="right"><code>${fmt(totalCommits)}</code></td></tr>`);
+  lines.push(
+    `<tr><td>🧭 Commits (default branches)</td><td align="right"><code>${fmt(
+      totalCommits
+    )}</code></td></tr>`
+  );
   lines.push(`<tr><td>🐞 Issues — Open</td><td align="right"><code>${fmt(openIssues)}</code></td></tr>`);
-  lines.push(`<tr><td>✅ Issues — Closed</td><td align="right"><code>${fmt(closedIssues)}</code></td></tr>`);
+  lines.push(
+    `<tr><td>✅ Issues — Closed</td><td align="right"><code>${fmt(closedIssues)}</code></td></tr>`
+  );
   lines.push(`<tr><td>🔁 PRs — Open</td><td align="right"><code>${fmt(openPRs)}</code></td></tr>`);
   lines.push(`<tr><td>🧹 PRs — Closed</td><td align="right"><code>${fmt(closedPRs)}</code></td></tr>`);
   lines.push(`<tr><td>🎉 PRs — Merged</td><td align="right"><code>${fmt(mergedPRs)}</code></td></tr>`);
@@ -187,7 +203,9 @@ function renderMarkdown(stats, topRepos) {
   lines.push(`</tbody>`);
   lines.push(`</table>`);
   lines.push("");
-  lines.push(`<sub>Updated: ${new Date().toISOString().replace("T", " ").replace("Z", " UTC")}</sub>`);
+  lines.push(
+    `<sub>Updated: ${new Date().toISOString().replace("T", " ").replace("Z", " UTC")}</sub>`
+  );
   lines.push("");
 
   if (topRepos.length) {
@@ -198,7 +216,9 @@ function renderMarkdown(stats, topRepos) {
     lines.push(`|---|---:|---:|---:|---:|---:|`);
     for (const r of topRepos) {
       lines.push(
-        `| [${r.name}](https://github.com/${ORG}/${r.name}) | ${fmt(r.commits)} | ${fmt(r.issuesOpen)} | ${fmt(r.prsOpen)} | ${fmt(r.stars)} | ${fmt(r.forks)} |`
+        `| [${r.name}](https://github.com/${ORG}/${r.name}) | ${fmt(r.commits)} | ${fmt(
+          r.issuesOpen
+        )} | ${fmt(r.prsOpen)} | ${fmt(r.stars)} | ${fmt(r.forks)} |`
       );
     }
     lines.push(`</details>`);
@@ -207,7 +227,6 @@ function renderMarkdown(stats, topRepos) {
 
   return lines.join("\n");
 }
-
 
 function replaceStatsSection(readme, newBlock) {
   const start = "<!-- ORG-STATS:START -->";
@@ -218,15 +237,21 @@ function replaceStatsSection(readme, newBlock) {
   return readme.replace(pattern, replacement);
 }
 
+// --- Main --------------------------------------------------------------------
 (async () => {
   try {
     const repos = await fetchAllRepos();
 
     const aggregated = {
-      repoCount: 0, totalCommits: 0,
-      openIssues: 0, closedIssues: 0,
-      openPRs: 0, closedPRs: 0, mergedPRs: 0,
-      stars: 0, forks: 0,
+      repoCount: 0,
+      totalCommits: 0,
+      openIssues: 0,
+      closedIssues: 0,
+      openPRs: 0,
+      closedPRs: 0,
+      mergedPRs: 0,
+      stars: 0,
+      forks: 0,
     };
 
     const perRepo = [];
@@ -251,7 +276,14 @@ function replaceStatsSection(readme, newBlock) {
       aggregated.stars += stars;
       aggregated.forks += forks;
 
-      perRepo.push({ name: r.name, commits, issuesOpen, prsOpen, stars, forks });
+      perRepo.push({
+        name: r.name,
+        commits,
+        issuesOpen,
+        prsOpen,
+        stars,
+        forks,
+      });
     }
 
     perRepo.sort((a, b) => b.commits - a.commits);
