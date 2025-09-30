@@ -3,7 +3,7 @@ name: Update Org Profile Stats
 on:
   workflow_dispatch: {}
   schedule:
-    - cron: "17 3 * * *"   # once daily at 03:17 UTC — change as you like
+    - cron: "17 3 * * *"   # daily at 03:17 UTC — adjust as you like
   push:
     paths:
       - "scripts/**"
@@ -12,12 +12,10 @@ on:
       - ".github/workflows/org-stats.yml"
 
 jobs:
-  build:
+  update-org-stats:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # to push README changes
-      # id-token: write     # not needed here
-      # issues: read        # not needed here
+      contents: write  # to push README changes
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,13 +25,13 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install (no deps, but keep step for future)
+      - name: Install (no deps needed)
         run: npm ci --ignore-scripts --prefer-offline || true
 
       - name: Update stats in README
         env:
-          ORG: your-org-login   # <-- set your org login here
-          # Use GH_TOKEN for private repos; store as an Actions Secret (Settings > Secrets and variables > Actions)
+          ORG: kir-rescomp
+          # Prefer a PAT if including PRIVATE repos; else GITHUB_TOKEN is fine for public.
           GH_TOKEN: ${{ secrets.ORG_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run update
