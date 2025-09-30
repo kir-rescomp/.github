@@ -1,0 +1,9 @@
+{
+  "name": "org-profile-stats",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update_stats.js"
+  }
+}
+
