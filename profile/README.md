@@ -17,7 +17,7 @@
 <tr><td>🐞 Issues — Open</td><td align="right"><code>0</code></td></tr>
 <tr><td>✅ Issues — Closed</td><td align="right"><code>1</code></td></tr>
 <tr><td>🔁 PRs — Open</td><td align="right"><code>0</code></td></tr>
-<tr><td>🧹 PRs — Closed</td><td align="right"><code>1</code></td></tr>
+<tr><td>🧹 PRs — Closed</td><td align="right"><code>2</code></td></tr>
 <tr><td>🎉 PRs — Merged</td><td align="right"><code>11</code></td></tr>
 <tr><td>⭐ Stars</td><td align="right"><code>0</code></td></tr>
 <tr><td>🍴 Forks</td><td align="right"><code>0</code></td></tr>
