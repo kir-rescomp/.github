@@ -178,6 +178,7 @@ function renderMarkdown(stats, topRepos) {
   // HTML badges (centered). Markdown isn’t parsed inside HTML, so we use <img>.
   lines.push(`<p align="center">${renderBadgesHTML(stats)}</p>`);
   lines.push("");
+  lines.push(`<div align="center">`);
   lines.push(`<table>`);
   lines.push(`<thead>`);
   lines.push(`<tr>`);
@@ -202,7 +203,7 @@ function renderMarkdown(stats, topRepos) {
   lines.push(`<tr><td>🍴 Forks</td><td align="right"><code>${fmt(forks)}</code></td></tr>`);
   lines.push(`</tbody>`);
   lines.push(`</table>`);
-  lines.push("");
+  lines.push(`</div>`);
   lines.push(
     `<sub>Updated: ${new Date().toISOString().replace("T", " ").replace("Z", " UTC")}</sub>`
   );
