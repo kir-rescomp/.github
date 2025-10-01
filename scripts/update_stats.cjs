@@ -10,6 +10,7 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const { isPromise } = require("util/types");
 
 const ORG = process.env.ORG || "kir-rescomp";
 const GH_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
@@ -85,6 +86,7 @@ query($org:String!, $after:String, $isFork:Boolean, $privacy:RepositoryPrivacy, 
       pageInfo { hasNextPage endCursor }
       nodes {
         name
+        isPrivate
         isFork
         isArchived
         stargazerCount
@@ -284,6 +286,7 @@ function replaceStatsSection(readme, newBlock) {
         prsOpen,
         stars,
         forks,
+        isPrivate: r.isPrivate,
       });
     }
 
