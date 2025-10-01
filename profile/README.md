@@ -1,4 +1,3 @@
-# KIR Research Computing
 
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
