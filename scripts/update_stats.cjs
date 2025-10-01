@@ -215,6 +215,7 @@ function renderMarkdown(stats, topRepos) {
     lines.push(`<details>`);
     lines.push(`<summary><b>⭐ Top repositories by commits</b></summary>`);
     lines.push("");
+    lines.push('<div align="center">');
     lines.push(`| Repository | Commits | Open Issues | Open PRs | Stars | Forks |`);
     lines.push(`|---|---:|---:|---:|---:|---:|`);
   for (const r of topRepos) {
@@ -229,6 +230,7 @@ function renderMarkdown(stats, topRepos) {
 
     lines.push(`</details>`);
     lines.push("");
+    lines.push(`</div>`);
   }
 
   return lines.join("\n");
