@@ -217,13 +217,16 @@ function renderMarkdown(stats, topRepos) {
     lines.push("");
     lines.push(`| Repository | Commits | Open Issues | Open PRs | Stars | Forks |`);
     lines.push(`|---|---:|---:|---:|---:|---:|`);
-    for (const r of topRepos) {
-      lines.push(
-        `| [${r.name}](https://github.com/${ORG}/${r.name}) | ${fmt(r.commits)} | ${fmt(
-          r.issuesOpen
-        )} | ${fmt(r.prsOpen)} | ${fmt(r.stars)} | ${fmt(r.forks)} |`
-      );
-    }
+  for (const r of topRepos) {
+    const repoLabel = r.isPrivate
+      ? "🔒 Private repo"
+      : `[${r.name}](https://github.com/${ORG}/${r.name})`;
+
+    lines.push(
+      `| ${repoLabel} | ${fmt(r.commits)} | ${fmt(r.issuesOpen)} | ${fmt(r.prsOpen)} | ${fmt(r.stars)} | ${fmt(r.forks)} |`
+    );
+  }
+
     lines.push(`</details>`);
     lines.push("");
   }
