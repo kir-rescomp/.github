@@ -42,7 +42,7 @@
 
 <!-- ORG-STATS:END -->
 
-## Computational groups at the Kennedy
+## 🧬 Computational groups at the Kennedy
 
 * Sansom lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/computational-genomics), [github](https://github.com/sansomlab)
 * Luo lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/luo-group-statistical-genomics-and-computational-immunology), [github](https://github.com/yang-luo-lab/)
