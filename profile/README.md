@@ -53,3 +53,8 @@
 * Johnson lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/computational-genomics), [github](https://github.com/OxfordCMS)
 * Hallou lab: [Institutional page](https://www.kennedy.ox.ac.uk/team/adrien-hallou)
 * Dendrou lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/dendrou-group-immune-disease-multiomics), [github](https://github.com/DendrouLab)
+
+- - - 
+* Oxford-ZEISS Centre of Excellence in Biomedical Imaging [github](https://github.com/Oxford-Zeiss-Centre-of-Excellence)
+
+* The Oxford Centre for Microbiome Studies [github](https://github.com/OxfordCMS)
