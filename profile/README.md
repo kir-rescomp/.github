@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../profile_images/readme_logo.png" alt="drawing" width="300"/>
+  <img src="../profile_images/readme_logo.png" alt="drawing" width="400"/>
 </p>
 
 <!-- ORG-STATS:START -->
