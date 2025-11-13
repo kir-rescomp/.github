@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../profile_images/readme_logo.png" alt="drawing" width="300"/>
+</p>
 
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
