@@ -2,6 +2,26 @@
   <img src="../profile_images/readme_logo.png" alt="drawing" width="400"/>
 </p>
 
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/🌟-POPULAR%20REPOSITORIES-ff6b6b?style=for-the-badge&labelColor=2d3748" alt="Popular Repositories" />
+</p>
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+<a href="https://kir-rescomp.github.io/kir-training-home/">
+<img src="https://img.shields.io/badge/Training-Catalogue-10b981?style=for-the-badge&logo=bookstack&logoColor=white" />
+</a>
+<br/>
+<sub>☝️ Click to explore </sub>
+</td>
+</tr>
+</table>
+
+---
+
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
 
