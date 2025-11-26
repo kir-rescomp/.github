@@ -25,7 +25,7 @@
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
 
-<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 19" src="https://img.shields.io/badge/Repos-19-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 836" src="https://img.shields.io/badge/Commits-836-10b981?style=for-the-badge" /> <img alt="Issues (open) - 0" src="https://img.shields.io/badge/Issues%20(open)-0-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
+<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 20" src="https://img.shields.io/badge/Repos-20-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 860" src="https://img.shields.io/badge/Commits-860-10b981?style=for-the-badge" /> <img alt="Issues (open) - 0" src="https://img.shields.io/badge/Issues%20(open)-0-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
 
 <div align="center">
 <table>
@@ -35,19 +35,19 @@
 </tr>
 </thead>
 <tbody>
-<tr><td>📦 Repositories</td><td align="right"><code>19</code></td></tr>
-<tr><td>🧭 Commits (default branches)</td><td align="right"><code>836</code></td></tr>
+<tr><td>📦 Repositories</td><td align="right"><code>20</code></td></tr>
+<tr><td>🧭 Commits (default branches)</td><td align="right"><code>860</code></td></tr>
 <tr><td>🐞 Issues — Open</td><td align="right"><code>0</code></td></tr>
 <tr><td>✅ Issues — Closed</td><td align="right"><code>6</code></td></tr>
 <tr><td>🔁 PRs — Open</td><td align="right"><code>0</code></td></tr>
 <tr><td>🧹 PRs — Closed</td><td align="right"><code>2</code></td></tr>
-<tr><td>🎉 PRs — Merged</td><td align="right"><code>212</code></td></tr>
+<tr><td>🎉 PRs — Merged</td><td align="right"><code>221</code></td></tr>
 <tr><td>⭐ Stars</td><td align="right"><code>1</code></td></tr>
 <tr><td>🍴 Forks</td><td align="right"><code>3</code></td></tr>
 </tbody>
 </table>
 </div>
-<sub>Updated: 2025-11-25 03:56:05.429 UTC</sub>
+<sub>Updated: 2025-11-26 03:55:44.771 UTC</sub>
 
 <details>
 <summary><b>⭐ Top repositories by commits</b></summary>
@@ -55,15 +55,15 @@
 | Repository | Commits | Open Issues | Open PRs | Stars | Forks |
 |---|---:|---:|---:|---:|---:|
 | [training-intro-to-git-github](https://github.com/kir-rescomp/training-intro-to-git-github) | 229 | 0 | 0 | 0 | 0 |
-| [.github](https://github.com/kir-rescomp/.github) | 154 | 0 | 0 | 0 | 1 |
-| [kir-training-home](https://github.com/kir-rescomp/kir-training-home) | 104 | 0 | 0 | 1 | 1 |
+| [.github](https://github.com/kir-rescomp/.github) | 155 | 0 | 0 | 0 | 1 |
+| [kir-training-home](https://github.com/kir-rescomp/kir-training-home) | 105 | 0 | 0 | 1 | 1 |
 | [training-intro-to-apptainer](https://github.com/kir-rescomp/training-intro-to-apptainer) | 64 | 0 | 0 | 0 | 1 |
 | [kir-easybuild](https://github.com/kir-rescomp/kir-easybuild) | 58 | 0 | 0 | 0 | 0 |
 | [mkdocs-material-supplementary](https://github.com/kir-rescomp/mkdocs-material-supplementary) | 58 | 0 | 0 | 0 | 0 |
 | [training-intro-to-linux-cli](https://github.com/kir-rescomp/training-intro-to-linux-cli) | 48 | 0 | 0 | 0 | 0 |
 | [Apptainer-def-files](https://github.com/kir-rescomp/Apptainer-def-files) | 23 | 0 | 0 | 0 | 0 |
+| 🔒 Private repo | 22 | 0 | 0 | 0 | 0 |
 | [training-intro-to-snakemake](https://github.com/kir-rescomp/training-intro-to-snakemake) | 20 | 0 | 0 | 0 | 0 |
-| [training-gpu-profiling](https://github.com/kir-rescomp/training-gpu-profiling) | 16 | 0 | 0 | 0 | 0 |
 </details>
 
 <!-- ORG-STATS:END -->
