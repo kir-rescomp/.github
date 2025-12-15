@@ -76,11 +76,8 @@
 * Johnson lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/computational-genomics), [github](https://github.com/OxfordCMS)
 * Hallou lab: [Institutional page](https://www.kennedy.ox.ac.uk/team/adrien-hallou)
 * Dendrou lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/dendrou-group-immune-disease-multiomics), [github](https://github.com/DendrouLab)
-* Fritzsche lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/fritzsche-group-biophysical-immunology), [github](https://github.com/bpi-oxford)
-
-- - - 
+* Fritzsche lab: [Institutional page](https://www.kennedy.ox.ac.uk/research/research-groups/fritzsche-group-biophysical-immunology), [github](https://github.com/bpi-oxford) 
 * Oxford-ZEISS Centre of Excellence in Biomedical Imaging: [Institutional Page](https://www.kennedy.ox.ac.uk/platforms-and-technologies/advanced-microscopy-centre/oxford-zeiss-centre-of-excellence-1), [github](https://github.com/Oxford-Zeiss-Centre-of-Excellence)
-
 * The Oxford Centre for Microbiome Studies [github](https://github.com/OxfordCMS)
 
 - - - 
