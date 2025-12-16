@@ -86,3 +86,4 @@
 ## <img src="../profile_images/openondemand.png" alt="open-ondemand-logo" width="150"/> apps
 
 1. [Marimo](https://github.com/FredHutch/ood_marimo)
+2. [VS code-server](https://github.com/kir-rescomp/ood-app-code-server/tree/main)
