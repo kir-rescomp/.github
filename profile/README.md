@@ -87,3 +87,4 @@
 
 1. [Marimo](https://github.com/kir-rescomp/ood-app-marimo)
 2. [VS code-server](https://github.com/kir-rescomp/ood-app-code-server/tree/main)
+3. [RStudio-Server](https://github.com/kir-rescomp/ood-app-rstudio-server)
