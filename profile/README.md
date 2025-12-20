@@ -25,7 +25,7 @@
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
 
-<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 25" src="https://img.shields.io/badge/Repos-25-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 1,172" src="https://img.shields.io/badge/Commits-1%2C172-10b981?style=for-the-badge" /> <img alt="Issues (open) - 3" src="https://img.shields.io/badge/Issues%20(open)-3-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
+<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 25" src="https://img.shields.io/badge/Repos-25-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 1,175" src="https://img.shields.io/badge/Commits-1%2C175-10b981?style=for-the-badge" /> <img alt="Issues (open) - 3" src="https://img.shields.io/badge/Issues%20(open)-3-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
 
 <div align="center">
 <table>
@@ -36,7 +36,7 @@
 </thead>
 <tbody>
 <tr><td>📦 Repositories</td><td align="right"><code>25</code></td></tr>
-<tr><td>🧭 Commits (default branches)</td><td align="right"><code>1,172</code></td></tr>
+<tr><td>🧭 Commits (default branches)</td><td align="right"><code>1,175</code></td></tr>
 <tr><td>🐞 Issues — Open</td><td align="right"><code>3</code></td></tr>
 <tr><td>✅ Issues — Closed</td><td align="right"><code>10</code></td></tr>
 <tr><td>🔁 PRs — Open</td><td align="right"><code>0</code></td></tr>
@@ -47,7 +47,7 @@
 </tbody>
 </table>
 </div>
-<sub>Updated: 2025-12-19 04:05:19.683 UTC</sub>
+<sub>Updated: 2025-12-20 03:56:08.211 UTC</sub>
 
 <details>
 <summary><b>⭐ Top repositories by commits</b></summary>
@@ -55,15 +55,15 @@
 | Repository | Commits | Open Issues | Open PRs | Stars | Forks |
 |---|---:|---:|---:|---:|---:|
 | [training-intro-to-git-github](https://github.com/kir-rescomp/training-intro-to-git-github) | 231 | 0 | 0 | 0 | 0 |
-| [.github](https://github.com/kir-rescomp/.github) | 192 | 0 | 0 | 0 | 1 |
+| [.github](https://github.com/kir-rescomp/.github) | 193 | 0 | 0 | 0 | 1 |
 | [kir-technical-essays-insights](https://github.com/kir-rescomp/kir-technical-essays-insights) | 110 | 1 | 0 | 0 | 0 |
 | [kir-training-home](https://github.com/kir-rescomp/kir-training-home) | 105 | 0 | 0 | 1 | 1 |
 | [mkdocs-material-supplementary](https://github.com/kir-rescomp/mkdocs-material-supplementary) | 90 | 0 | 0 | 0 | 0 |
 | [kir-easybuild](https://github.com/kir-rescomp/kir-easybuild) | 71 | 0 | 0 | 0 | 0 |
 | [training-intro-to-apptainer](https://github.com/kir-rescomp/training-intro-to-apptainer) | 64 | 0 | 0 | 0 | 1 |
 | [training-intro-to-linux-cli](https://github.com/kir-rescomp/training-intro-to-linux-cli) | 48 | 0 | 0 | 0 | 0 |
+| [bmrc-cluster-status](https://github.com/kir-rescomp/bmrc-cluster-status) | 31 | 0 | 0 | 0 | 0 |
 | [ood-app-marimo](https://github.com/kir-rescomp/ood-app-marimo) | 30 | 0 | 0 | 0 | 0 |
-| [ood-app-rstudio-server](https://github.com/kir-rescomp/ood-app-rstudio-server) | 30 | 0 | 0 | 0 | 0 |
 </details>
 
 <!-- ORG-STATS:END -->
