@@ -25,7 +25,7 @@
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
 
-<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 28" src="https://img.shields.io/badge/Repos-28-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 1,354" src="https://img.shields.io/badge/Commits-1%2C354-10b981?style=for-the-badge" /> <img alt="Issues (open) - 4" src="https://img.shields.io/badge/Issues%20(open)-4-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
+<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 28" src="https://img.shields.io/badge/Repos-28-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 1,355" src="https://img.shields.io/badge/Commits-1%2C355-10b981?style=for-the-badge" /> <img alt="Issues (open) - 4" src="https://img.shields.io/badge/Issues%20(open)-4-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 0" src="https://img.shields.io/badge/PRs%20(open)-0-8b5cf6?style=for-the-badge" /> <img alt="Stars - 1" src="https://img.shields.io/badge/Stars-1-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 3" src="https://img.shields.io/badge/Forks-3-06b6d4?style=for-the-badge&logo=github" /></p>
 
 <div align="center">
 <table>
@@ -36,7 +36,7 @@
 </thead>
 <tbody>
 <tr><td>📦 Repositories</td><td align="right"><code>28</code></td></tr>
-<tr><td>🧭 Commits (default branches)</td><td align="right"><code>1,354</code></td></tr>
+<tr><td>🧭 Commits (default branches)</td><td align="right"><code>1,355</code></td></tr>
 <tr><td>🐞 Issues — Open</td><td align="right"><code>4</code></td></tr>
 <tr><td>✅ Issues — Closed</td><td align="right"><code>11</code></td></tr>
 <tr><td>🔁 PRs — Open</td><td align="right"><code>0</code></td></tr>
@@ -47,7 +47,7 @@
 </tbody>
 </table>
 </div>
-<sub>Updated: 2026-01-16 04:11:06.381 UTC</sub>
+<sub>Updated: 2026-01-17 04:04:23.085 UTC</sub>
 
 <details>
 <summary><b>⭐ Top repositories by commits</b></summary>
@@ -55,7 +55,7 @@
 | Repository | Commits | Open Issues | Open PRs | Stars | Forks |
 |---|---:|---:|---:|---:|---:|
 | [training-intro-to-git-github](https://github.com/kir-rescomp/training-intro-to-git-github) | 231 | 0 | 0 | 0 | 0 |
-| [.github](https://github.com/kir-rescomp/.github) | 220 | 0 | 0 | 0 | 1 |
+| [.github](https://github.com/kir-rescomp/.github) | 221 | 0 | 0 | 0 | 1 |
 | [kir-technical-essays-insights](https://github.com/kir-rescomp/kir-technical-essays-insights) | 174 | 1 | 0 | 0 | 0 |
 | [kir-training-home](https://github.com/kir-rescomp/kir-training-home) | 105 | 0 | 0 | 1 | 1 |
 | [mkdocs-material-supplementary](https://github.com/kir-rescomp/mkdocs-material-supplementary) | 90 | 0 | 0 | 0 | 0 |
