@@ -68,7 +68,6 @@
 
 <!-- ORG-STATS:END -->
 
-## 🧬 Computational groups at the Kennedy
 
 ## 🧬 Computational Groups at the Kennedy
 
