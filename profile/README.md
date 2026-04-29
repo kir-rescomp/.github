@@ -71,7 +71,6 @@
 
 ## 🧬 Computational Groups at the Kennedy
 
-<div align="center">
 | Group | Institutional Page | GitHub |
 |---|---|---|
 | **Sansom Lab** | [![page](https://img.shields.io/badge/Kennedy_Institute-002147?style=flat-square&logoColor=white)](https://www.kennedy.ox.ac.uk/research/research-groups/computational-genomics) | [![github](https://img.shields.io/badge/sansomlab-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sansomlab) |
@@ -85,7 +84,6 @@
 | **Oxford–ZEISS Centre of Excellence** | [![page](https://img.shields.io/badge/Kennedy_Institute-002147?style=flat-square&logoColor=white)](https://www.kennedy.ox.ac.uk/platforms-and-technologies/advanced-microscopy-centre/oxford-zeiss-centre-of-excellence-1) | [![github](https://img.shields.io/badge/Oxford--Zeiss--CoE-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Oxford-Zeiss-Centre-of-Excellence) |
 | **Oxford Centre for Microbiome Studies** |[![page](https://img.shields.io/badge/Kennedy_Institute-002147?style=flat-square&logoColor=white)](https://www.kennedy.ox.ac.uk/ocms) | [![github](https://img.shields.io/badge/OxfordCMS-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/OxfordCMS) |
 
-</div>
 - - - 
 <br>
 
