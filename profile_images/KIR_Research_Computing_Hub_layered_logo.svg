@@ -5,8 +5,11 @@
    viewBox="0 0 917 917"
    version="1.1"
    id="svg21"
-   sodipodi:docname="KIR_Research_Computing_Hub_layered_editable.svg"
+   sodipodi:docname="KIR_Research_Computing_Hub_layered_logo.svg"
    inkscape:version="1.4.3 (1:1.4.3+202512261034+0d15f75042)"
+   inkscape:export-filename="KIR_Research_Computing_Hub_layered_logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +25,7 @@
      inkscape:deskcolor="#505050"
      inkscape:zoom="0.71544715"
      inkscape:cx="615"
-     inkscape:cy="614.30114"
+     inkscape:cy="612.90341"
      inkscape:window-width="2560"
      inkscape:window-height="1403"
      inkscape:window-x="0"
@@ -72,7 +75,7 @@
   </defs>
   <!-- transparent background -->
   <rect
-     style="fill:#f9f9f9;stroke:#ffffff;stroke-width:1.01671"
+     style="fill:#ffffff;stroke:#ffffff;stroke-width:1.01671;fill-opacity:1"
      id="rect21"
      width="939.25604"
      height="929.47198"
