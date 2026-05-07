@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../profile_images/KIR_Research_Computing_Hub_layered_logo.png" alt="drawing" width="400"/>
+  <img src="../profile_images/KIR_Research_Computing_Hub_layered_logo.png" alt="drawing" width="250"/>
 </p>
 
 ---
