@@ -11,6 +11,18 @@
 <table align="center">
 <tr>
 <td align="center" width="33%">
+<a href="https://kir-rescomp.github.io/kir-researchcomp-hub">
+<img src="https://img.shields.io/badge/Research%20Computing%20Hub-10b981?style=for-the-badge&logo=bookstack&logoColor=white" />
+</a>
+<br/>
+<sub>☝️ Click to explore </sub>
+</td>
+</tr>
+</table>
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
 <a href="https://kir-rescomp.github.io/kir-training-home/">
 <img src="https://img.shields.io/badge/Training-Catalogue-10b981?style=for-the-badge&logo=bookstack&logoColor=white" />
 </a>
