@@ -37,7 +37,7 @@
 <!-- ORG-STATS:START -->
 ### 📊 Organisation Stats for **kir-rescomp**
 
-<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 43" src="https://img.shields.io/badge/Repos-43-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 3,411" src="https://img.shields.io/badge/Commits-3%2C411-10b981?style=for-the-badge" /> <img alt="Issues (open) - 6" src="https://img.shields.io/badge/Issues%20(open)-6-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 2" src="https://img.shields.io/badge/PRs%20(open)-2-8b5cf6?style=for-the-badge" /> <img alt="Stars - 4" src="https://img.shields.io/badge/Stars-4-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 5" src="https://img.shields.io/badge/Forks-5-06b6d4?style=for-the-badge&logo=github" /></p>
+<p align="center"><a href="https://github.com/kir-rescomp?tab=repositories"><img alt="Repos - 43" src="https://img.shields.io/badge/Repos-43-0a84ff?style=for-the-badge&logo=github" /></a> <img alt="Commits - 3,414" src="https://img.shields.io/badge/Commits-3%2C414-10b981?style=for-the-badge" /> <img alt="Issues (open) - 5" src="https://img.shields.io/badge/Issues%20(open)-5-f59e0b?style=for-the-badge" /> <img alt="PRs (open) - 1" src="https://img.shields.io/badge/PRs%20(open)-1-8b5cf6?style=for-the-badge" /> <img alt="Stars - 4" src="https://img.shields.io/badge/Stars-4-14b8a6?style=for-the-badge&logo=github" /> <img alt="Forks - 5" src="https://img.shields.io/badge/Forks-5-06b6d4?style=for-the-badge&logo=github" /></p>
 
 <div align="center">
 <table>
@@ -48,18 +48,18 @@
 </thead>
 <tbody>
 <tr><td>📦 Repositories</td><td align="right"><code>43</code></td></tr>
-<tr><td>🧭 Commits (default branches)</td><td align="right"><code>3,411</code></td></tr>
-<tr><td>🐞 Issues — Open</td><td align="right"><code>6</code></td></tr>
-<tr><td>✅ Issues — Closed</td><td align="right"><code>35</code></td></tr>
-<tr><td>🔁 PRs — Open</td><td align="right"><code>2</code></td></tr>
+<tr><td>🧭 Commits (default branches)</td><td align="right"><code>3,414</code></td></tr>
+<tr><td>🐞 Issues — Open</td><td align="right"><code>5</code></td></tr>
+<tr><td>✅ Issues — Closed</td><td align="right"><code>36</code></td></tr>
+<tr><td>🔁 PRs — Open</td><td align="right"><code>1</code></td></tr>
 <tr><td>🧹 PRs — Closed</td><td align="right"><code>3</code></td></tr>
-<tr><td>🎉 PRs — Merged</td><td align="right"><code>894</code></td></tr>
+<tr><td>🎉 PRs — Merged</td><td align="right"><code>895</code></td></tr>
 <tr><td>⭐ Stars</td><td align="right"><code>4</code></td></tr>
 <tr><td>🍴 Forks</td><td align="right"><code>5</code></td></tr>
 </tbody>
 </table>
 </div>
-<sub>Updated: 2026-11-22 11:35:02.018 UTC</sub>
+<sub>Updated: 2026-11-23 13:00:39.215 UTC</sub>
 
 <details>
 <summary><b>⭐ Top repositories by commits</b></summary>
@@ -67,15 +67,15 @@
 | Repository | Commits | Open Issues | Open PRs | Stars | Forks |
 |---|---:|---:|---:|---:|---:|
 | [kir-researchcomp-hub](https://github.com/kir-rescomp/kir-researchcomp-hub) | 609 | 0 | 0 | 2 | 0 |
-| [.github](https://github.com/kir-rescomp/.github) | 556 | 0 | 0 | 0 | 1 |
+| [.github](https://github.com/kir-rescomp/.github) | 557 | 0 | 0 | 0 | 1 |
 | [kir-easybuild](https://github.com/kir-rescomp/kir-easybuild) | 317 | 0 | 0 | 0 | 0 |
 | [training-intro-to-git-github](https://github.com/kir-rescomp/training-intro-to-git-github) | 260 | 0 | 0 | 0 | 0 |
 | [training-basics-python-packaging](https://github.com/kir-rescomp/training-basics-python-packaging) | 132 | 0 | 0 | 0 | 0 |
 | [kir-training-home](https://github.com/kir-rescomp/kir-training-home) | 125 | 0 | 0 | 1 | 1 |
 | [training-intro-to-snakemake](https://github.com/kir-rescomp/training-intro-to-snakemake) | 118 | 0 | 0 | 0 | 0 |
 | [mkdocs-material-supplementary](https://github.com/kir-rescomp/mkdocs-material-supplementary) | 93 | 0 | 0 | 0 | 0 |
+| [ood-app-mdv](https://github.com/kir-rescomp/ood-app-mdv) | 91 | 1 | 0 | 1 | 1 |
 | [gh200_benchmarking](https://github.com/kir-rescomp/gh200_benchmarking) | 89 | 0 | 0 | 0 | 1 |
-| [ood-app-mdv](https://github.com/kir-rescomp/ood-app-mdv) | 89 | 2 | 1 | 1 | 1 |
 </details>
 
 <!-- ORG-STATS:END -->
